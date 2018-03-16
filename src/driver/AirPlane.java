@@ -51,8 +51,8 @@ public class AirPlane {
         String output;
         output = "Airplane Information: \n";
         output += "\tAircragft: " + this.make;
-        output += " Model: " + this.model + "\n";
-        output += "\tCapacity: " + this.capacity + " seats\n";
+       // output += " Model: " + this.model + "\n";
+        //output += "\tCapacity: " + this.capacity + " seats\n";
         //output += "\tPilot : " +  this.pilot.getName();
         return output;
     }
