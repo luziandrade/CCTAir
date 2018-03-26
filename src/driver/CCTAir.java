@@ -8,7 +8,7 @@ package driver;
 
 /**
  *
- * @author Diogo Pessoa
+ * @author Diogo Pessoa, Luzilene and Luana
  */
 public class CCTAir {
 

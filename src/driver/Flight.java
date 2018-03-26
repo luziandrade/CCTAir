@@ -9,9 +9,21 @@ package driver;
  *
  * @author Diogo Pessoa
  */
-public class Flight {
+private class Flight {
  
-    //TODO EVERYTHING
+    String origin;
+    String destination;
+    String departureTime;
+    String arrivalTime;
+    String dateOfFlight;
+    AirPlane aircraft;  
+    
+    public Flight (String origin, String destination, String departuteTime, 
+            String arrivalTime, String dateOfFlight, AirPlane aircraft){
+        this. 
+    }
+    
+    
     
     
     
