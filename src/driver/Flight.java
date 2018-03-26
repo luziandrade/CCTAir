@@ -5,27 +5,106 @@
  */
 package driver;
 
+import java.text.ParseException;
+
+import java.time.format.DateTimeFormatter;
+
+import java.util.Locale;
+
 /**
  *
  * @author Diogo Pessoa
  */
-private class Flight {
+
+
+
+public class Flight {
  
-    String origin;
-    String destination;
-    String departureTime;
-    String arrivalTime;
-    String dateOfFlight;
-    AirPlane aircraft;  
+       
+    private String origin;
+    private String destination;
+    private String departureTime;
+    private String arrivalTime;
+    private String dateFlight;
+    private AirPlane airplane;
+
+    public Flight (String origin, String destination, String departureTime,
+            String arrivalTime, String dateFlight, AirPlane airplane){
+        this.origin = origin;
+        this.destination = destination;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+        this.dateFlight = dateFlight;
+        this.airplane = airplane;
+    }
+
     
-    public Flight (String origin, String destination, String departuteTime, 
-            String arrivalTime, String dateOfFlight, AirPlane aircraft){
-        this. 
+//    public void dateFormat() throws ParseException { //puxar so a data no formato dd/mm/yyyy
+//    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.ENGLISH);
+//    LocalDate date = LocalDate.parse(dateFlight, formatter);
+//    System.out.println(date);
+//    }
+    
+    
+    public String getOrigin() {
+        return origin;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public String getDepartureTime() {
+        return departureTime;
+    }
+
+    public String getArrivalTime() {
+        return arrivalTime;
+    }
+
+    public String getDateOfFlight() {
+        return dateFlight;
+    }
+
+    public AirPlane getAircraft() {
+        return airplane;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public void setDepartureTime(String departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public void setArrivalTime(String arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    public void setDateOfFlight(String dateFlight) {
+        this.dateFlight = dateFlight;
+    }
+
+    public void setAircraft(AirPlane airplane) {
+        this.airplane = airplane;
     }
     
-    
-    
-    
-    
-    
+     @Override // pq é um metodo da super classe objeto
+    public String toString(){
+        String output;
+        output = "Flight Information: \n";
+       // output += "\tAirPlane: " + this.airplane;
+        output += "\tOrigin: " + this.origin + "\n";
+        output += "\tDestination: " + this.destination + "\n";
+        output += "\tDeparture Time: " + this.departureTime + "\n";
+        output += "\tArrival Time: " + this.arrivalTime + "\n";
+        output += "\tDate of Flight: " + this.dateFlight + "\n";
+        return output;
+    }
+
 }
