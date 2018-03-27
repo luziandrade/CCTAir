@@ -9,7 +9,7 @@ package driver;
  *
  * @author Diogo Pessoa
  */
-public class Pilot extends Staff {
+public class Pilot extends Employee {
     
     int rating = 0;
     

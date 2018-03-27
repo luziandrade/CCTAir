@@ -9,14 +9,14 @@ package driver;
  *
  * @author Diogo Pessoa
  */
-abstract class Staff {
+abstract class Employee {
     
     private String name = "";
     private String dob = "";
     private String address = "";
     private int pps = 0;
     
-    public Staff(String name, String dob, String address, int pps){
+    public Employee(String name, String dob, String address, int pps){
         this.name = name;
         this.name = dob;
         this.address = address;
