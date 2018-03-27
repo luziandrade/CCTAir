@@ -19,16 +19,18 @@ public class CCTAir {
      */
     public static void main(String[] args){
         
-        AirPlane aviao = new AirPlane("Embraer", "St-34", 25);
+        Pilot p1 = new Pilot("Diogo", "04-10-80", "67 Blessington St", 121345, 1); 
         
-        System.out.println(aviao.toString());
+        AirPlane aviao = new AirPlane("Embraer", "St-34", "E", 25);
         
         Flight bhz = new Flight("Dublin", "Belo", "12:35", "23:57", "12/04/2018", aviao);
         
-        //bhz.dateFormat();
+       
+        aviao.assingPilot(p1);
         
         System.out.println(bhz.toString());
         
+        System.out.println(aviao.toString());
         
         
         

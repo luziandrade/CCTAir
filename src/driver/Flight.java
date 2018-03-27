@@ -19,8 +19,8 @@ import java.util.Locale;
 
 
 public class Flight {
- 
-       
+
+
     private String origin;
     private String destination;
     private String departureTime;
@@ -94,17 +94,16 @@ public class Flight {
         this.airplane = airplane;
     }
     
+    
+    
      @Override // pq é um metodo da super classe objeto
     public String toString(){
         String output;
         output = "Flight Information: \n";
-       // output += "\tAirPlane: " + this.airplane;
-        output += "\tOrigin: " + this.origin + "\n";
-        output += "\tDestination: " + this.destination + "\n";
-        output += "\tDeparture Time: " + this.departureTime + "\n";
-        output += "\tArrival Time: " + this.arrivalTime + "\n";
-        output += "\tDate of Flight: " + this.dateFlight + "\n";
-        return output;
+        output += "\tDate: " + this.dateFlight + "\n";
+        output += "\tFrom: " + this.origin + " to " + this.destination + "\n";
+        output += "\tFlight time: " + this.departureTime + " to " + this.arrivalTime + "\n";   
+              return output;
     }
 
 }

@@ -11,14 +11,14 @@ package driver;
  */
 abstract class Employee {
     
-    private String name = "";
-    private String dob = "";
-    private String address = "";
-    private int pps = 0;
+    private String name;
+    private String dob;
+    private String address;
+    private int pps;
     
     public Employee(String name, String dob, String address, int pps){
         this.name = name;
-        this.name = dob;
+        this.dob = dob;
         this.address = address;
         this.pps = pps;
     }

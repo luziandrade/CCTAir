@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -11,9 +11,9 @@ package driver;
  */
 public class Pilot extends Employee {
     
-    int rating = 0;
+    int rating;
     
-    private Pilot(String name, String dob, String address, int pps, int rating){
+    public Pilot(String name, String dob, String address, int pps, int rating){
         super(name, dob, address, pps);
         
         this.rating = rating;
