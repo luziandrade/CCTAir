@@ -5,12 +5,6 @@
  */
 package driver;
 
-import java.text.ParseException;
-
-import java.time.format.DateTimeFormatter;
-
-import java.util.Locale;
-
 /**
  *
  * @author Diogo Pessoa
@@ -26,6 +20,7 @@ public class Flight {
 
     public Flight(String origin, String destination, String departureTime,
             String arrivalTime, String dateFlight, AirPlane airplane) {
+
         this.origin = origin;
         this.destination = destination;
         this.departureTime = departureTime;
@@ -33,12 +28,7 @@ public class Flight {
         this.dateFlight = dateFlight;
         this.airplane = airplane;
     }
-
-//    public void dateFormat() throws ParseException { //puxar so a data no formato dd/mm/yyyy
-//    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.ENGLISH);
-//    LocalDate date = LocalDate.parse(dateFlight, formatter);
-//    System.out.println(date);
-//    }
+    
     public String getOrigin() {
         return origin;
     }
@@ -95,7 +85,8 @@ public class Flight {
     @Override // pq é um metodo da super classe objeto
     public String toString() {
         String output;
-        output = "Flight Information: \n";
+        output = "----------// - CCTAir - //----------\n";
+        output += "Flight Information: \n";
         output += "\tDate: " + this.dateFlight + "\n";
         output += "\tFrom: " + this.origin + " to " + this.destination + "\n";
         output += "\tFlight time: " + this.departureTime + " to " + this.arrivalTime + "\n";
