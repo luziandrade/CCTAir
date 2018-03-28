@@ -1,7 +1,5 @@
 package driver;
 
-import java.text.ParseException;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,7 +8,7 @@ import java.text.ParseException;
 
 /**
  *
- * @author Diogo Pessoa, Luzilene and Luana
+ * @author Diogo Pessoa 2016326, Luana Andrade 2016270 and Luzilene OLiveira 2016299
  */
 public class CCTAir {
 
@@ -24,16 +22,9 @@ public class CCTAir {
         AirPlane aviao = new AirPlane("Embraer", "St-34", "E", 25);
         
         Flight bhz = new Flight("Dublin", "Belo", "12:35", "23:57", "12/04/2018", aviao);
-        
        
         aviao.assingPilot(p1);
         
         System.out.println(bhz.toString());
-        
-        System.out.println(aviao.toString());
-        
-        
-        
     }
-    
 }

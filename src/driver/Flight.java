@@ -15,11 +15,7 @@ import java.util.Locale;
  *
  * @author Diogo Pessoa
  */
-
-
-
 public class Flight {
-
 
     private String origin;
     private String destination;
@@ -28,8 +24,8 @@ public class Flight {
     private String dateFlight;
     private AirPlane airplane;
 
-    public Flight (String origin, String destination, String departureTime,
-            String arrivalTime, String dateFlight, AirPlane airplane){
+    public Flight(String origin, String destination, String departureTime,
+            String arrivalTime, String dateFlight, AirPlane airplane) {
         this.origin = origin;
         this.destination = destination;
         this.departureTime = departureTime;
@@ -38,14 +34,11 @@ public class Flight {
         this.airplane = airplane;
     }
 
-    
 //    public void dateFormat() throws ParseException { //puxar so a data no formato dd/mm/yyyy
 //    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.ENGLISH);
 //    LocalDate date = LocalDate.parse(dateFlight, formatter);
 //    System.out.println(date);
 //    }
-    
-    
     public String getOrigin() {
         return origin;
     }
@@ -82,11 +75,7 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
-    public void setArrivalTime(String arrivalTime) {
-        this.arrivalTime = arrivalTime;
-    }
-
-    public void setDateOfFlight(String dateFlight) {
+    public void setDateFlight(String dateFlight) {
         this.dateFlight = dateFlight;
     }
 
@@ -94,16 +83,24 @@ public class Flight {
         this.airplane = airplane;
     }
     
+    public void schedule(String arrivalTime){
+        this.arrivalTime = arrivalTime;
+    }
     
+    public void schedule(String arrivalTime, String departureTime){
+        this.arrivalTime = arrivalTime;
+        this.departureTime = departureTime;
+    }
     
-     @Override // pq é um metodo da super classe objeto
-    public String toString(){
+    @Override // pq é um metodo da super classe objeto
+    public String toString() {
         String output;
         output = "Flight Information: \n";
         output += "\tDate: " + this.dateFlight + "\n";
         output += "\tFrom: " + this.origin + " to " + this.destination + "\n";
-        output += "\tFlight time: " + this.departureTime + " to " + this.arrivalTime + "\n";   
-              return output;
+        output += "\tFlight time: " + this.departureTime + " to " + this.arrivalTime + "\n";
+        output += "\tAirPlane Information" + this.airplane;
+        return output;
     }
 
 }

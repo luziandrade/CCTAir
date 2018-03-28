@@ -52,28 +52,31 @@ public class AirPlane {
         this.category = category;
     }
     
-    public void assingPilot(Pilot pilot){
+     public void assingPilot(Pilot pilot){
         
         if (pilot.getRating() == 1 && category.equals("E")){
             this.pilot = pilot;
-            System.out.print("Pilot is able to flight this airplane");
-        }else if (pilot.getRating() == 2 && category.equals("A") && category.equals("E")){
+        }else if (pilot.getRating() == 2 && category.equals("E") && category.equals("A")){
             this.pilot = pilot;
-            System.out.print("Pilot is able to flight this airplane");
+        }else if (pilot.getRating() == 3 && category.equals("E") && category.equals("A") && category.equals("B") ){
+            this.pilot = pilot;
+        }else if (pilot.getRating() == 4 && category.equals("E") && category.equals("A") && category.equals("B") && category.equals("C")){    
+            this.pilot = pilot;
+        }else if (pilot.getRating() == 5 && category.equals("E") && category.equals("A") && category.equals("B") && category.equals("C") && category.equals("D")){    
+            this.pilot = pilot;    
         }else{
             System.out.print("Pilot is not allowed to fly");
-        } 
- 
+        }
     }
 
    @Override // pq é um metodo da super classe objeto
     public String toString(){
         String output;
-        output = "\tPlane Information: \n";
-        output += "\tAircraft: " + this.make;
+        output = "\t \n";
+        output += "\t\tAircraft: " + this.make;
         output += " Model: " + this.model + "\n";
-        output += "\tCapacity: " + this.capacity + " seats\n";
-        output += "\tPilot : " +  this.pilot.getName();
+        output += "\t\tCapacity: " + this.capacity + " seats\n";
+        output += "\t\tPilot : " +  this.pilot.getName();
         return output;
     }
     
